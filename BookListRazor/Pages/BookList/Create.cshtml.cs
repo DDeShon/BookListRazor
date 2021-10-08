@@ -35,7 +35,7 @@ namespace BookListRazor.Pages.BookList
             }
             else
             {
-
+                return Page();
             }
         }
     }
