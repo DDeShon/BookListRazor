@@ -38,10 +38,8 @@ namespace BookListRazor.Pages.BookList
 
                 return RedirectToPage("Index");
             }
-            else
-            {
-                return RedirectToPage();
-            }
+            return RedirectToPage();
+            
         }
     }
 }
