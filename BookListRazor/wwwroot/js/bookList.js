@@ -12,8 +12,8 @@ function loadDataTable() {
             "datatype": "json"
         },
         "columns": [
-            {"data":"name","width":"30%"},
-            {"data":"author","width":"30%"},
+            { "data": "name", "width": "30%" },
+            { "data": "author", "width": "30%" },
             { "data": "isbn", "width": "30%" },
             {
                 "data": "id",
@@ -29,8 +29,12 @@ function loadDataTable() {
                     </div>
                         
                     `
-                }
+                }, "width": "30%"
             }
-        ]
-    })
+        ],
+        "language": {
+            "emptyTable": "no data found"
+        },
+        "width": "100%"
+    });
 }
