@@ -23,12 +23,14 @@ namespace BookListRazor.Pages.BookList
 
         public async Task<IActionResult> OnGet(int? id)
         {
+            // Create
             Book = new Book();
             if (id == null)
             {
                 return Page();
             }
 
+            // Update
             Book = await _db.Book.FirstOrDefaultAsync(u => u.Id == id);
             if (Book == null)
             {
@@ -41,10 +43,14 @@ namespace BookListRazor.Pages.BookList
         {
             if (ModelState.IsValid)
             {
-                var BookFromDb = await _db.Book.FindAsync(Book.Id);
-                BookFromDb.Name = Book.Name;
-                BookFromDb.Author = Book.Author;
-                BookFromDb.ISBN = Book.ISBN;
+                if (Book.Id == 0)
+                {
+                    _db.Book.Add(Book);
+                }
+                else
+                {
+                    _db.Book.Update(Book);
+                }
 
                 await _db.SaveChangesAsync();
 
