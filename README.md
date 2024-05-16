@@ -1,2 +1,2 @@
 ﻿# asp.net_razor_tutorial
-This is a library application created with ASP.net, Razor and C#, used to refamiliarize myself with the technologies.
+This is a library application created with ASP.net, Razor and C#, used to refamiliarize myself with the technologies. The app allows the user to save books to a database and retrieve them as needed.
